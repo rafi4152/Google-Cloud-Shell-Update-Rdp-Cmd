@@ -4,7 +4,7 @@
 
 ---
 
-## ⚡ ১. Lightweight & Super Fast Edition
+## ⚡ [সেকশন ১] Lightweight & Super Fast Edition
 **ফাইলের নাম:** `Ubuntu:24.04_Xfce4_Light_Weight_Super_Fast.sh`
 
 যারা খুব দ্রুত (১ মিনিটের মধ্যে) আরডিপি চালু করতে চান এবং কোনো ল্যাগ ছাড়া স্মুথ পারফরম্যান্স চান, তাদের জন্য এটি পারফেক্ট।
@@ -16,6 +16,6 @@
 * 🌐 **Google Chrome:** ব্রাউজিংয়ের জন্য অফিশিয়াল ক্রোম ব্রাউজার রেডি।
 * 📉 **লো-ল্যাটেন্সি:** নেটওয়ার্ক স্পিড কম থাকলেও ব্রাউজারে ল্যাগ ছাড়া খুব স্মুথলি চালানো যায়।
 
-### 🚀 রান করার কমান্ড:
-```bash
-curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)" | bash
+### 🔗 Raw Link:
+```text
+[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)
