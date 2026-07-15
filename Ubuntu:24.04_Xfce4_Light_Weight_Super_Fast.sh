@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# Bypass all interactive frontend prompts to prevent freezing
+# Prevent any interactive prompt freezes
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=a
+
+clear
+echo "===================================================="
+echo "   [1/3] PRE-INSTALLING ESSENTIAL CORE PACKAGES     "
+echo "===================================================="
+# ফেইলুর ঠেকাতে ছোট ছোট বেসিক প্যাকেজগুলো সবার আগে ইনস্টল করে নেওয়া
+sudo apt-get update -y -qq
+sudo apt-get install -y -qq curl wget gnupg2 software-properties-common apt-transport-https &>/dev/null
 
 clear
 echo "===================================================="
@@ -10,66 +18,66 @@ echo "          CHROME REMOTE DESKTOP SETUP              "
 echo "===================================================="
 echo "INSTRUCTIONS:"
 echo "1. Go to: https://remotedesktop.google.com/headless"
-echo "2. Login, click 'Begin' -> 'Next' -> 'Authorize'"
-echo "3. Copy the command line for 'Debian Linux'"
-echo "4. Paste only the inside of --code=\"...\" below"
+echo "2. Login and click Authorize"
+echo "3. Copy the Debian Linux command"
 echo "===================================================="
 echo ""
 
-# STEP 1: Request Authentication Code first to ensure no skip
-read -p "Enter Auth Code (Only the value inside --code=): " AUTH_CODE
+# সবার আগে ডেবিয়ান অথেন্টিকেশন কোড ও পিন ইনপুট ফিক্স করা
+printf "👉 Paste Debian Auth Code (inside --code=\"...\"): "
+ln -sf /dev/tty /dev/stdin 2>/dev/null
+read -r AUTH_CODE < /dev/tty
 
-# STEP 2: Request 6-Digit PIN
 echo ""
 echo "----------------------------------------------------"
-echo "Set a 6-digit PIN to connect to your RDP"
+echo " Set your 6-digit RDP Login Password / PIN"
 echo "----------------------------------------------------"
-read -s -p "Enter 6-Digit PIN: " RDP_PIN
+printf "👉 Enter VNC/RDP PIN: "
+read -s -r RDP_PIN < /dev/tty
 echo ""
-read -s -p "Confirm 6-Digit PIN: " RDP_PIN_CONFIRM
+printf "👉 Confirm VNC/RDP PIN: "
+read -s -r RDP_PIN_CONFIRM < /dev/tty
 echo ""
 
-# Validation check for PIN matching
 if [ "$RDP_PIN" != "$RDP_PIN_CONFIRM" ]; then
-    echo "Error: PIN codes do not match! Please run the script again."
+    echo "❌ Error: PIN codes do not match! Please run again."
     exit 1
 fi
 
 clear
 echo "===================================================="
-echo "   [1/3] INSTANTLY INSTALLING LIGHTWEIGHT CORE...  "
+echo "   [2/3] RUNNING LIGHTWEIGHT GRAPHICS & OBS SETUP   "
 echo "===================================================="
 
-# Update and install minimal desktop core & ffmpeg silently
-sudo apt-get update -y -qq
+# লাইটওয়েট ডেক্সটপ এনভায়রনমেন্ট
 sudo apt-get install -y -qq --no-install-recommends \
-    xfce4 xfce4-goodies xvfb dbus-x11 wget curl ffmpeg software-properties-common
+    xfce4 xfce4-goodies xvfb dbus-x11 ffmpeg
 
-# Install OBS Studio
-sudo add-apt-repository ppa:obsproject/obs-studio -y
+# ওবিএস স্টুডিও রিপোজিটরি ও ইনস্টল
+sudo add-apt-repository ppa:obsproject/obs-studio -y &>/dev/null
 sudo apt-get update -y -qq
 sudo apt-get install -y -qq obs-studio
 
-# Download and install Chrome Remote Desktop & Google Chrome
+# ক্রোম রিমোট ডেক্সটপ ও অফিশিয়াল ক্রোম ব্রাউজার
 wget -q https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg -i chrome-remote-desktop_current_amd64.deb || sudo apt-get install -f -y -qq
 
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y -qq
 
-# Configure XFCE Session and permissions
+# সেশন পারমিশন সেটআপ
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 sudo groupadd chrome-remote-desktop 2>/dev/null
 sudo usermod -a -G chrome-remote-desktop $USER
 
-# Clean up downloaded setup files to save space
+# জাঙ্ক ফাইল রিমুভ
 rm -f chrome-remote-desktop_current_amd64.deb google-chrome-stable_current_amd64.deb
 
 echo "===================================================="
-echo "   [2/3] STARTING LIGHTWEIGHT RDP HOST...           "
+echo "   [3/3] STARTING LIGHTWEIGHT RDP HOST...           "
 echo "===================================================="
 
-# Launch the Remote Desktop Host service in background
+# রিমোট ডেক্সটপ হোস্ট সার্ভিস ব্যাকগ্রাউন্ডে চালু করা
 /opt/google/chrome-remote-desktop/start-host \
     --code="$AUTH_CODE" \
     --redirect-url="https://remotedesktop.google.com/_/oauthredirect" \
@@ -80,15 +88,13 @@ sleep 3
 clear
 
 echo "===================================================="
-echo "   [3/3] SUCCESS! LIGHTWEIGHT XFCE RDP IS ONLINE    "
+echo "   🎉 SUCCESS! LIGHTWEIGHT XFCE RDP IS ONLINE       "
 echo "===================================================="
-echo "INSTRUCTIONS TO ACCESS RDP:"
-echo "1. Go to: https://remotedesktop.google.com/access"
-echo "2. Click on your computer name: $(hostname)"
-echo "3. Enter the 6-digit PIN you created earlier."
+echo "👉 Access Link: https://remotedesktop.google.com/access"
+echo "👉 Computer Name: $(hostname)"
 echo "===================================================="
 
-# Keep-alive loop to maintain the Cloud Shell session active
+# একটিভ সেশন ধরে রাখার লুপ
 seq 1 43200 | while read i; do 
     echo -en "\r RDP Running Active . $i s / 43200 s"; sleep 1
 done
