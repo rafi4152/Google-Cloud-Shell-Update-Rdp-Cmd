@@ -40,11 +40,7 @@ curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-R
 
 
 
-```
-### 🚀 রান করার কমান্ড:
-
-```bash
-curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh" | bash
+curl -sL https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh | bash
 
 
 ```
