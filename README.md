@@ -1,5 +1,6 @@
 Ubuntu Working Now
-curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh" | bash
+```bash
+curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh)" | bash
 # 🚀 Full Power Ubuntu 24.04 LTS RDP with OBS Studio
 
 গুগল ক্লাউড শেলের (Google Cloud Shell) জন্য একটি সম্পূর্ণ অপ্টিমাইজড এবং ধাপে ধাপে সাজানো লিনাক্স আরডিপি (RDP) স্ক্রিপ্ট। এটি এক ক্লিকে সম্পূর্ণ **Ubuntu GNOME GUI**, **Google Chrome Browser**, এবং **OBS Studio** লেটেস্ট ভার্সনসহ ইনস্টল করে দেয়।
@@ -20,8 +21,7 @@ curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-R
 ### ধাপ ১: গুগল ক্লাউড শেলে রান করুন
 আপনার গুগল ক্লাউড শেলের টার্মিনালে নিচের এই এক লাইনের কমান্ডটি পেস্ট করে **Enter** চাপুন:
 
-```bash
-curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh)" | bash
+
 
 
 
