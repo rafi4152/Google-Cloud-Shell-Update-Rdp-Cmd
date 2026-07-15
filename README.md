@@ -1,3 +1,6 @@
+দুঃখিত ভাই, এবার একদম পরিষ্কার আর কোনো কনফিউশন ছাড়াই পুরো জিনিসটা একটা সিঙ্গেল ফাইলে গুছিয়ে দিচ্ছি। আপনার রিপোজিটরির সব কোড, সব বৈশিষ্ট্য এবং ব্যবহারের নিয়মাবলি—সবকিছুই এই একটিমাত্র README.md ফাইলের ভেতরে সুন্দরভাবে সাজিয়ে দেওয়া হলো।
+আপনি জাস্ট নিচের পুরো বক্সের কোডটুকু একবারে কপি করে আপনার গিটহাবের **README.md** ফাইলে পেস্ট করে দিন:
+```markdown
 # 🖥️ Google Cloud Shell Ubuntu 24.04 RDP System
 
 গুগল ক্লাউড শেলের (Google Cloud Shell) জন্য সম্পূর্ণ অপ্টিমাইজড ক্রোম রিমোট ডেক্সটপ (Chrome Remote Desktop) স্ক্রিপ্ট কালেকশন। এখানে আপনার প্রয়োজন অনুযায়ী দুটি আলাদা এডিশন দেওয়া হলো: একটি সুপার ফাস্ট ও লাইটওয়েট এবং অন্যটি ফুল ফিচার্ড প্রিমিয়াম জিইউআই।
@@ -5,7 +8,7 @@
 ---
 
 ## ⚡ [সেকশন ১] Lightweight & Super Fast Edition
-**ফাইেলের নাম:** `Ubuntu:24.04_Xfce4_Light_Weight_Super_Fast.sh`
+**ফাইলের নাম:** `Ubuntu:24.04_Xfce4_Light_Weight_Super_Fast.sh`
 
 যারা খুব দ্রুত (১ মিনিটের মধ্যে) আরডিপি চালু করতে চান এবং কোনো ল্যাগ ছাড়া স্মুথ পারফরম্যান্স চান, তাদের জন্য এটি পারফেক্ট।
 
@@ -19,3 +22,38 @@
 ### 🔗 Raw Link:
 ```text
 [https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)
+
+```
+### 🚀 রান করার কমান্ড:
+```bash
+curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)" | bash
+
+```
+## 🌟 [সেকশন ২] Premium Gnome GUI Edition
+**ফাইলের নাম:** Gnome_Gui_Ubuntu:24.04.sh
+যারা উবুন্টুর আসল অফিসিয়াল এবং আধুনিক লুক (Look & Feel) উপভোগ করতে চান এবং সব ধরণের সফটওয়্যার সাপোর্ট চান, তাদের জন্য এই এডিশন।
+### ✨ বৈশিষ্ট্যসমূহ (Features):
+ * 🎨 **Full Ubuntu GNOME GUI:** উবুন্টু অপারেটিং সিস্টেমের আসল ও প্রিমিয়াম অফিসিয়াল ইউজার ইন্টারফেস।
+ * 🎥 **OBS Studio & FFmpeg:** হাই-কোয়ালিটি স্ট্রিমিং ও ভিডিও প্রসেসিং প্যাকেজ বিল্ট-ইন।
+ * 🚀 **রিসোর্স বুস্টার:** ১৬ জিবি স্টোরেজ ও ৮ জিবি র‍্যামের সর্বোচ্চ স্পিড পেতে ব্যাকগ্রাউন্ডে ভার্চুয়াল সোয়াপ মেমোরি ট্রিক যুক্ত।
+ * 📦 **অ্যাডভান্সড সফটওয়্যার ম্যানেজার:** আরডিপির ভেতর যেকোনো অ্যাপ এক ক্লিকে ইনস্টল/আনইনস্টল করার জন্য Synaptic Package Manager এবং প্রয়োজনীয় সব বেসিক কম্পাইলার টুলস দেওয়া আছে।
+### 🔗 Raw Link:
+```text
+[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh)
+
+```
+### 🚀 রান করার কমান্ড:
+```bash
+curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh)" | bash
+
+```
+## 🛠️ কীভাবে ব্যবহার করবেন (Step-by-Step Guide)
+ 1. আপনার পছন্দমতো যেকোনো একটি কমান্ড কপি করে **Google Cloud Shell** টার্মিনালে পেস্ট করে **Enter** চাপুন।
+ 2. স্ক্রিপ্ট রান হওয়ার পর আপনার কাছে অথেনটিকেশন কোড চাওয়া হবে। কোডটি পেতে remotedesktop.google.com/headless লিংকে যান।
+ 3. জিমেইল দিয়ে লগইন করে **Begin -> Next -> Authorize** করুন এবং **Debian Linux** এর পাশের কোডটি কপি করে টার্মিনালে পেস্ট করুন।
+ 4. আরডিপির জন্য নিজের ইচ্ছামতো একটি **৬ ডিজিটের পিন (PIN)** সেট করুন এবং কনফার্ম করুন।
+ 5. এবার আরডিপি স্ক্রিনটি দেখতে সরাসরি চলে যান: remotedesktop.google.com/access
+⚠️ **মনে রাখবেন:** গুগল ক্লাউড শেলের ফ্রি পলিসি অনুযায়ী সেশনটি সচল রাখতে ব্রাউজার ট্যাবটি ওপেন রাখুন।
+```
+
+```
