@@ -19,4 +19,4 @@
 আপনার গুগল ক্লাউড শেলের টার্মিনালে নিচের এই এক লাইনের কমান্ডটি পেস্ট করে **Enter** চাপুন:
 
 ```bash
-curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh)" | bash
+curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/refs/heads/main/Ubuntu%3A24.04.sh" | bash
