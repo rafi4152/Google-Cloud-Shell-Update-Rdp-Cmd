@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# গিটহাব থেকে মূল স্ক্রিপ্ট নামানো
-wget -O ng.sh https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 2>&1
-chmod +x ng.sh
-./ng.sh
+# যদি ngrok আগে থেকে না থাকে তবে ডাউনলোড করা
+if [ ! -f "./ngrok" ]; then
+    echo "Downloading Ngrok..."
+    wget -O ng.sh https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 2>&1
+    chmod +x ng.sh
+    ./ng.sh
+fi
 
 function goto
 {
@@ -36,38 +39,37 @@ echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "Choose ngrok region: " CRP
 
-# ব্যাকগ্রাউন্ডে এনগ্রক রান করা এবং প্রসেস ধরে রাখা
-nohup ./ngrok tcp --region $CRP 4000 > /dev/null 2>&1 &
+# noVNC সাধারণত ৮০৮০ (8080) পোর্টে চলে, তাই এনগ্রক টানেল ৮০৮০ পোর্টে করা হলো
+./ngrok http 8080 --region $CRP > /dev/null 2>&1 &
 
-echo "Starting Ngrok tunnel..."
-sleep 5
+echo "Starting Ngrok tunnel for noVNC..."
+sleep 7
 
-# এনগ্রক কানেকশন চেক করা
+# টানেল চেক করা
 if curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1; then 
     echo "Ngrok Tunnel: OK"
 else 
-    echo "Ngrok Error! Retrying..." && sleep 2 && goto ngrok
+    echo "Ngrok failed to start! Retrying..."
+    sleep 3
+    goto ngrok
 fi
 
-# ডকার কন্টেইনার স্টার্ট করা (আপনার কাস্টম ইউজারনেম ও পাসওয়ার্ড সহ)
-echo "Starting Ubuntu NoMachine Docker Container..."
-docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=Aziz@2006 -e USER=312765 --cap-add=SYS_PTRACE --shm-size=1g thuonghai2711/nomachine-ubuntu-desktop:windows10
+# ব্রাউজার/noVNC সাপোর্টেড ডকার কন্টেইনার স্টার্ট করা
+echo "Starting Ubuntu Desktop with noVNC..."
+docker run -d --rm --network host --name ubuntu-novnc -e USER=312765 -e PASSWORD=Aziz@2006 -e VNC_PASSWORD=Aziz@2006 dorowu/ubuntu-desktop-lxde-vnc
 
 clear
 echo "=========================================="
-echo "NoMachine: https://www.nomachine.com/download"
+echo "Open this Link in your Browser to access RDP:"
 echo "=========================================="
-echo "Done! NoMachine Information:"
-echo -n "IP Address: "
+echo -n "noVNC Link: "
 
-# আপডেটেড আইপি এক্সট্রাকশন
-curl --silent http://127.0.0.1:4040/api/tunnels | grep -o '"public_url":"tcp://[^"]*' | tr -d '"public_url":"tcp://'
+# এনগ্রক থেকে সরাসরি ব্রাউজার লিংক জেনারেট করা
+curl --silent http://127.0.0.1:4040/api/tunnels | grep -o '"public_url":"https://[^"]*' | sed 's/"public_url":"//'
 echo ""
-
 echo "User: 312765"
 echo "Passwd: Aziz@2006"
 echo "=========================================="
-echo "VM can't connect? Restart Cloud Shell then Re-run script."
 
 # ১২ ঘণ্টার লুপ প্রোটেকশন
 seq 1 43200 | while read i; do 
