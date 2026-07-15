@@ -20,13 +20,13 @@
 * 📉 **লো-ল্যাটেন্সি:** নেটওয়ার্ক স্পিড কম থাকলেও ব্রাউজারে ল্যাগ ছাড়া খুব স্মুথলি চালানো যায়।
 
 ### 🔗 Raw Link:
-```text
-[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)
+curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh" | bash
+
 
 ```
 ### 🚀 রান করার কমান্ড:
 ```bash
-curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh)" | bash
+curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Ubuntu%3A24.04_Xfce4_Light_Weight_Super_Fast.sh" | bash
 
 ```
 ## 🌟 [সেকশন ২] Premium Gnome GUI Edition
@@ -37,14 +37,13 @@ curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-
  * 🎥 **OBS Studio & FFmpeg:** হাই-কোয়ালিটি স্ট্রিমিং ও ভিডিও প্রসেসিং প্যাকেজ বিল্ট-ইন।
  * 🚀 **রিসোর্স বুস্টার:** ১৬ জিবি স্টোরেজ ও ৮ জিবি র‍্যামের সর্বোচ্চ স্পিড পেতে ব্যাকগ্রাউন্ডে ভার্চুয়াল সোয়াপ মেমোরি ট্রিক যুক্ত।
  * 📦 **অ্যাডভান্সড সফটওয়্যার ম্যানেজার:** আরডিপির ভেতর যেকোনো অ্যাপ এক ক্লিকে ইনস্টল/আনইনস্টল করার জন্য Synaptic Package Manager এবং প্রয়োজনীয় সব বেসিক কম্পাইলার টুলস দেওয়া আছে।
-### 🔗 Raw Link:
-```text
-[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh)
+
 
 ```
 ### 🚀 রান করার কমান্ড:
 ```bash
-curl -sL "[https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh](https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh)" | bash
+curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh" | bash
+
 
 ```
 ## 🛠️ কীভাবে ব্যবহার করবেন (Step-by-Step Guide)
