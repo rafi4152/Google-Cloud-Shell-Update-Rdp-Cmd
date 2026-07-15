@@ -5,7 +5,7 @@
 ---
 
 ## ⚡ [সেকশন ১] Lightweight & Super Fast Edition
-**ফাইলের নাম:** `Ubuntu:24.04_Xfce4_Light_Weight_Super_Fast.sh`
+**ফাইেলের নাম:** `Ubuntu:24.04_Xfce4_Light_Weight_Super_Fast.sh`
 
 যারা খুব দ্রুত (১ মিনিটের মধ্যে) আরডিপি চালু করতে চান এবং কোনো ল্যাগ ছাড়া স্মুথ পারফরম্যান্স চান, তাদের জন্য এটি পারফেক্ট।
 
