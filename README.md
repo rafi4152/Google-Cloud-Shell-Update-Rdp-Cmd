@@ -39,8 +39,10 @@ curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-R
  * 📦 **অ্যাডভান্সড সফটওয়্যার ম্যানেজার:** আরডিপির ভেতর যেকোনো অ্যাপ এক ক্লিকে ইনস্টল/আনইনস্টল করার জন্য Synaptic Package Manager এবং প্রয়োজনীয় সব বেসিক কম্পাইলার টুলস দেওয়া আছে।
 
 
+
 ```
 ### 🚀 রান করার কমান্ড:
+
 ```bash
 curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-Rdp-Cmd/main/Gnome_Gui_Ubuntu%3A24.04.sh" | bash
 
@@ -48,7 +50,7 @@ curl -sL "https://raw.githubusercontent.com/rafi4152/Google-Cloud-Shell-Update-R
 ```
 ## 🛠️ কীভাবে ব্যবহার করবেন (Step-by-Step Guide)
  1. আপনার পছন্দমতো যেকোনো একটি কমান্ড কপি করে **Google Cloud Shell** টার্মিনালে পেস্ট করে **Enter** চাপুন।
- 2. স্ক্রিপ্ট রান হওয়ার পর আপনার কাছে অথেনটিকেশন কোড চাওয়া হবে। কোডটি পেতে remotedesktop.google.com/headless লিংকে যান।
+ 2. স্ক্রিপ্ট রান হওয়ার পর আপনার কাছে অথেনটিকেশন কোড চাইতে হবে। কোডটি পেতে remotedesktop.google.com/headless লিংকে যান।
  3. জিমেইল দিয়ে লগইন করে **Begin -> Next -> Authorize** করুন এবং **Debian Linux** এর পাশের কোডটি কপি করে টার্মিনালে পেস্ট করুন।
  4. আরডিপির জন্য নিজের ইচ্ছামতো একটি **৬ ডিজিটের পিন (PIN)** সেট করুন এবং কনফার্ম করুন।
  5. এবার আরডিপি স্ক্রিনটি দেখতে সরাসরি চলে যান: remotedesktop.google.com/access
